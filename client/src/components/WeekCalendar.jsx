@@ -137,14 +137,14 @@ export default function WeekCalendar({ routines, notify, onStart }) {
   };
 
   const handlers = { onStart, onStatus: setStatus, onRemove: remove, onMove: move, onAssign: assign };
-  const done = entries.filter((e) => e.status === 'done').length;
+  const count = (status) => entries.filter((e) => e.status === status).length;
 
   return (
     <section>
       <div className="row between head">
         <div>
           <h2>{monthDay(days[0])} – {monthDay(days[6])}</h2>
-          <p className="muted small">{week} · {done} of {entries.length} done</p>
+          <p className="muted small">{week} · {count('done')} done · {count('planned')} planned · {count('skipped')} skipped</p>
         </div>
         <div className="row">
           <button className="ghost" onClick={() => setStart(addDays(start, -7))}>Previous</button>
