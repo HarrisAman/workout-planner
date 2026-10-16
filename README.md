@@ -23,7 +23,7 @@ You need: Node 18+, a free MongoDB Atlas cluster, and (for history) a GitHub dat
 4. Connect > Drivers: copy the connection string.
 
 ### 2. GitHub data repo + token
-1. Create a new repo, e.g. `workout-data`, and **tick "Add a README"** so the `main` branch exists.
+1. Create a new repo, e.g. `workout-data`, and **tick "Add a README"** so the `main` branch exists.  Any name works; just set it in `GITHUB_REPO`. Keep this separate from the repo that holds the app's code, because the app commits to the data repo automatically.
 2. Settings > Developer settings > Personal access tokens > **Fine-grained tokens** > Generate.
 3. Repository access: **Only select repositories** > `workout-data`.
 4. Permissions: **Contents: Read and write**. Nothing else.
